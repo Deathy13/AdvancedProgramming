@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136616830358206418}
   - component: {fileID: 114045804332403636}
   - component: {fileID: 195769171033764886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -99,6 +99,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 195769171033764886}
   target: {fileID: 0}
+  waypointParent: {fileID: 0}
+  distanceToWaypoint: 1
+  detectionRadius: 5
 --- !u!136 &136616830358206418
 CapsuleCollider:
   m_ObjectHideFlags: 1

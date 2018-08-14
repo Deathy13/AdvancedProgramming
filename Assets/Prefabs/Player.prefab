@@ -206,14 +206,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 447b11d504113e041a355618e092b09d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitBox: {fileID: 65834955450613116}
-  damage: 50
+  cam: {fileID: 0}
+  weapon: {fileID: 0}
   speed: 5
   jumpSpeed: 5
   gravity: 20
-  controller: {fileID: 143810281665939646}
+  controller: {fileID: 0}
   hitDuration: 1
-  hitDelay: 0
+  hitDelay: 2
 --- !u!114 &114284213823415312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -225,10 +225,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90c384c3cc5b7947afc0370e86a2b00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hideCursor: 0
   target: {fileID: 4180605587173952}
-  ignoreLayers:
-    serializedVersion: 2
-    m_Bits: 512
+  offset: {x: 0, y: 1, z: 0}
   maxDistance: 5
   xSpeed: 120
   ySpeed: 120
@@ -236,6 +235,12 @@ MonoBehaviour:
   yMaxLimit: 80
   distanceMin: 0.5
   distanceMax: 15
+  cameraCollision: 0
+  rayDistance: 1000
+  ignoreLayers:
+    serializedVersion: 2
+    m_Bits: 512
+  camRadius: 1
 --- !u!114 &114820652895232226
 MonoBehaviour:
   m_ObjectHideFlags: 1

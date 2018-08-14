@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public BoxCollider hitBox;
-    public int damage = 50;
+    public Transform cam;
+    public GameObject weapon;
     public float speed = 5f;
     public float jumpSpeed = 5f;
     public float gravity = 20f;
@@ -25,6 +25,10 @@ public class Player : MonoBehaviour
         float inputV = Input.GetAxis("Vertical");
         if (controller.isGrounded)
         {
+
+            Vector3 euler = cam.transform.eulerAngles;
+            transform.rotation = Quaternion.AngleAxis(euler.y, Vector3.up);
+
             moveDirection = new Vector3(inputH, 0, inputV);
             moveDirection = transform.TransformDirection(moveDirection);
             moveDirection *= speed;
@@ -37,40 +41,9 @@ public class Player : MonoBehaviour
 
 
         // Check if space is pressed
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            if (isAllowedToHit)
-            {
-                // Run hit sequence
-                StartCoroutine(Hit());
-                StartCoroutine(HitDelay());
-            }
-        }
-    }
-
-    IEnumerator HitDelay()
-    {
-        isAllowedToHit = false;
-        yield return new WaitForSeconds(hitDelay);
-        isAllowedToHit = true;
-    }
-
-    IEnumerator Hit()
-    {
-        hitBox.enabled = true;
-        yield return new WaitForSeconds(hitDuration);
-        hitBox.enabled = false;
-    }
-
-    // OnTriggerEnter is called when the Collider other enters the trigger
-    private void OnTriggerEnter(Collider other)
-    {
-        // Detect enemy
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy != null)
-        {
-            // Deal damage
-            enemy.DealDamage(damage);
+            weapon.SetActive(true);
         }
     }
 }
