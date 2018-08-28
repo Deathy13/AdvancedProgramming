@@ -157,7 +157,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -176,6 +176,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -256,7 +260,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-109396
+  m_Name: pb_Mesh4932
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -417,7 +421,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (3)
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -477,7 +481,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -496,6 +500,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -915,7 +923,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -935,6 +943,10 @@ Prefab:
       propertyPath: detectionRadius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
   m_IsPrefabAsset: 0
@@ -943,91 +955,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4721076310625710, guid: 837e1e7f1ada43d4599104d917de81b6,
     type: 2}
   m_PrefabInternal: {fileID: 392053038}
---- !u!1 &406203524
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 406203525}
-  - component: {fileID: 406203528}
-  - component: {fileID: 406203527}
-  - component: {fileID: 406203526}
-  m_Layer: 9
-  m_Name: Melee
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &406203525
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406203524}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1012365723}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &406203526
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406203524}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &406203527
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406203524}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 4294967295
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &406203528
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 406203524}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &476381659
 Prefab:
   m_ObjectHideFlags: 0
@@ -1071,7 +998,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -1090,6 +1017,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -1110,7 +1041,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (1)
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -1325,7 +1256,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -1344,6 +1275,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -1396,7 +1331,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -1415,6 +1350,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -1627,7 +1566,7 @@ Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: pb_Mesh-90282
+  m_Name: pb_Mesh4990
   serializedVersion: 9
   m_SubMeshes:
   - serializedVersion: 2
@@ -5275,43 +5214,8 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114284213823415312, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: cameraCollision
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1989793417292760, guid: feb5f6113f4fe8742b334a11056b9864, type: 2}
-      propertyPath: m_TagString
-      value: MainCamera
-      objectReference: {fileID: 0}
-    - target: {fileID: 114208219754911550, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: charC
-      value: 
-      objectReference: {fileID: 1620821966}
-    - target: {fileID: 114208219754911550, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: controller
-      value: 
-      objectReference: {fileID: 1620821966}
-    - target: {fileID: 114208219754911550, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 1479670153}
-    - target: {fileID: 114284213823415312, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: camRadius
-      value: 0.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 114284213823415312, guid: feb5f6113f4fe8742b334a11056b9864,
-        type: 2}
-      propertyPath: ignoreLayers.m_Bits
-      value: 1536
-      objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 65834955450613116, guid: feb5f6113f4fe8742b334a11056b9864, type: 2}
-    - {fileID: 54255790873736272, guid: feb5f6113f4fe8742b334a11056b9864, type: 2}
+    - {fileID: 136441024549280098, guid: feb5f6113f4fe8742b334a11056b9864, type: 2}
   m_SourcePrefab: {fileID: 100100000, guid: feb5f6113f4fe8742b334a11056b9864, type: 2}
   m_IsPrefabAsset: 0
 --- !u!43 &985656172
@@ -5517,7 +5421,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -5536,6 +5440,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -5742,7 +5650,7 @@ GameObject:
   m_Layer: 0
   m_Name: Waypoint (2)
   m_TagString: Untagged
-  m_Icon: {fileID: 3306451490063965843, guid: 0000000000000000d000000000000000, type: 0}
+  m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -5802,7 +5710,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -5821,6 +5729,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -6240,7 +6152,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -6259,6 +6171,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -6311,7 +6227,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -6330,6 +6246,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -6494,17 +6414,6 @@ Mesh:
   m_MeshMetrics[0]: 1
   m_MeshMetrics[1]: 1
   m_MeshOptimized: 0
---- !u!4 &1479670153 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4568215774537416, guid: feb5f6113f4fe8742b334a11056b9864,
-    type: 2}
-  m_PrefabInternal: {fileID: 953956962}
---- !u!114 &1479670154 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114284213823415312, guid: feb5f6113f4fe8742b334a11056b9864,
-    type: 2}
-  m_PrefabInternal: {fileID: 953956962}
-  m_Script: {fileID: 11500000, guid: d90c384c3cc5b7947afc0370e86a2b00, type: 3}
 --- !u!1001 &1496530004
 Prefab:
   m_ObjectHideFlags: 0
@@ -6548,7 +6457,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -6568,6 +6477,10 @@ Prefab:
       propertyPath: detectionRadius
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
   m_IsPrefabAsset: 0
@@ -6576,35 +6489,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4721076310625710, guid: 837e1e7f1ada43d4599104d917de81b6,
     type: 2}
   m_PrefabInternal: {fileID: 1496530004}
---- !u!1 &1620821965 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1231613370286594, guid: feb5f6113f4fe8742b334a11056b9864,
-    type: 2}
-  m_PrefabInternal: {fileID: 953956962}
---- !u!143 &1620821966 stripped
-CharacterController:
-  m_CorrespondingSourceObject: {fileID: 143810281665939646, guid: feb5f6113f4fe8742b334a11056b9864,
-    type: 2}
-  m_PrefabInternal: {fileID: 953956962}
---- !u!114 &1620821967 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114208219754911550, guid: feb5f6113f4fe8742b334a11056b9864,
-    type: 2}
-  m_PrefabInternal: {fileID: 953956962}
-  m_Script: {fileID: 11500000, guid: 447b11d504113e041a355618e092b09d, type: 3}
---- !u!114 &1620821971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1620821965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a30e58173d6cd084fb17661959debe7b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  conttroler: {fileID: 1620821967}
-  cam: {fileID: 1479670154}
 --- !u!1 &1636740468
 GameObject:
   m_ObjectHideFlags: 0
@@ -7054,7 +6938,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -7073,6 +6957,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -10565,7 +10453,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -10584,6 +10472,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -14027,25 +13919,62 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 33040044785480160, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 114045804332403636, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
-        type: 2}
-      propertyPath: m_StoppingDistance
-      value: 1
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 114045804332403636, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: waypointParent
       value: 
       objectReference: {fileID: 1636740469}
-    - target: {fileID: 114045804332403636, guid: 837e1e7f1ada43d4599104d917de81b6,
+    - target: {fileID: 114968659285865970, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
-      propertyPath: detectionRadius
-      value: 5
+      propertyPath: m_havePropertiesChanged
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114968659285865970, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: m_isInputParsingRequired
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1609669116727306, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247393045766376, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 82447782646251396, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: Loop
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82447782646251396, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1160227268532884, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 82447782646251396, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 83cbfc62882021140a953f616ff27d35, type: 3}
+    - target: {fileID: 82447782646251396, guid: 837e1e7f1ada43d4599104d917de81b6,
+        type: 2}
+      propertyPath: BypassEffects
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
@@ -14098,7 +14027,7 @@ Prefab:
         type: 2}
       propertyPath: target
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1012365723}
     - target: {fileID: 195769171033764886, guid: 837e1e7f1ada43d4599104d917de81b6,
         type: 2}
       propertyPath: m_StoppingDistance
@@ -14117,6 +14046,10 @@ Prefab:
         type: 2}
       propertyPath: detectionRadius
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1251698625014288, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 837e1e7f1ada43d4599104d917de81b6, type: 2}
