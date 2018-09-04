@@ -21,8 +21,20 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float inputH = Input.GetAxis("Horizontal");
-        float inputV = Input.GetAxis("Vertical");
+       
+       
+        moveDirection.y -= gravity * Time.deltaTime;
+        controller.Move(moveDirection * Time.deltaTime);
+
+
+        // Check if space is pressed
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            weapon.SetActive(true);
+        }
+    }
+    public void Move(float inputH,float inputV,bool isJumping)
+    {
         if (controller.isGrounded)
         {
 
@@ -35,15 +47,6 @@ public class Player : MonoBehaviour
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
 
-        }
-        moveDirection.y -= gravity * Time.deltaTime;
-        controller.Move(moveDirection * Time.deltaTime);
-
-
-        // Check if space is pressed
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            weapon.SetActive(true);
         }
     }
 }

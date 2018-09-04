@@ -36,12 +36,14 @@ public class Enemy : MonoBehaviour
     private int currentIndex = 1;
     private Transform[] waypoints;
 
+    // An event to subscribe to for networking or other things
+    public UnityEvent onAlert;
+
     void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, detectionRadius);
     }
-
     void Start()
     {
         waypoints = waypointParent.GetComponentsInChildren<Transform>();
@@ -52,6 +54,20 @@ public class Enemy : MonoBehaviour
         currentState = State.Patrol;
         target = null;
     }
+    
+    public void ActivateAlert()
+    {
+        alertSymbol.SetActive(true);
+        alertSound.Play();
+    }
+
+    public void OnAlert()
+    {
+        // NOTE: This needs to be setup in a Command - https://docs.unity3d.com/ScriptReference/Networking.CommandAttribute.html
+        // video on Commands - https://www.youtube.com/watch?v=XnnoRz3vs2I
+        onAlert.Invoke();
+    }
+
     void Patrol()
     {
         alertSymbol.SetActive(false);
@@ -73,14 +89,18 @@ public class Enemy : MonoBehaviour
         {
             target = fov.visibleTargets[0];
             currentState = State.Seek;
-            alertSound.Play(); //AudioSource
-            alertSymbol.SetActive(true);// textmesh pro - gameobject
+
+            ActivateAlert(); // Activate the symbol & sound
+            OnAlert(); // Invoke anything else subscribed to it
         }
-
-
     }
     void Seek()
     {
+        if (target == null)
+        {
+            Debug.LogError("There is no target connected to '" + name + "'");
+            return;
+        } 
         // Update the AI's target position
         agent.SetDestination(target.position);
         float disToTarget = Vector3.Distance(transform.position, target.position);
@@ -91,8 +111,17 @@ public class Enemy : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    public void Move()
     {
+        // Make a script called "NetworkEnemyInput"
+        // Run this function in NetworkEnemyInput (check if 'isServer' only)
+        /* 
+         * EXAMPLE - In Update:
+         * if(isServer)
+         * {
+         *      enemy.Move();
+         * }
+         */
         switch (currentState)
         {
             case State.Patrol:

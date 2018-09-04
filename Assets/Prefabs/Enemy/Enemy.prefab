@@ -58,6 +58,7 @@ GameObject:
   - component: {fileID: 114045804332403636}
   - component: {fileID: 195769171033764886}
   - component: {fileID: 114600960595202462}
+  - component: {fileID: 114429687730613722}
   m_Layer: 10
   m_Name: Enemy
   m_TagString: Untagged
@@ -367,6 +368,18 @@ MonoBehaviour:
   fov: {fileID: 114600960595202462}
   distanceToWaypoint: 1
   detectionRadius: 5
+--- !u!114 &114429687730613722
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1251698625014288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59bedefb930e0d94daa048a446270b03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemy: {fileID: 0}
 --- !u!114 &114600960595202462
 MonoBehaviour:
   m_ObjectHideFlags: 1
