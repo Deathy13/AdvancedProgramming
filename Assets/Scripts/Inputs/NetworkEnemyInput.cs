@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 public class NetworkEnemyInput : NetworkBehaviour
 {
     public Enemy enemy;
+    
     // Use this for initialization
     void Start()
     {
@@ -18,20 +19,21 @@ public class NetworkEnemyInput : NetworkBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isServer)
+        if (isClient)
         {
             enemy.Move();
         }
     }
-
-    [ClientRpc]
-    void RpcRecieveAlert()
+    
+    [Command]
+    void CmdTransmitAlert()
     {
         enemy.ActivateAlert();
     }
     
+    [ClientCallback]
     void SendAlert()
     {
-        RpcRecieveAlert();
+        CmdTransmitAlert();
     }
 }

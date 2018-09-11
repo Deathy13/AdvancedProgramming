@@ -20,17 +20,35 @@ public class EnemySpawner : NetworkBehaviour
             //     Random.Range(0, 180),
             //     0.0f);
 
+
             GameObject enemyClone = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
-
             // Get Enemy component from 'enemyPrefab'
-        // |Declaration|<-----------Definition------------>|
+            // |Declaration|<-----------Definition------------>|
             Enemy enemy = enemyClone.GetComponent<Enemy>();
-
             // Assign (=) the waypointParent to enemy.waypointParent;
             enemy.waypointParent = waypointParent;
             NetworkServer.Spawn(enemyClone);
+
+            //SpawnEnemy();
         }
     }
+
+    [ClientCallback] void SpawnEnemy()
+    {
+        CmdSpawnEnemy();
+    }
+
+    [Command] void CmdSpawnEnemy()
+    {
+        GameObject enemyClone = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation);
+        // Get Enemy component from 'enemyPrefab'
+        // |Declaration|<-----------Definition------------>|
+        Enemy enemy = enemyClone.GetComponent<Enemy>();
+        // Assign (=) the waypointParent to enemy.waypointParent;
+        enemy.waypointParent = waypointParent;
+        NetworkServer.Spawn(enemyClone);
+    }
+
     // Use this for initialization
-    
+
 }

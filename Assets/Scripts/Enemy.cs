@@ -24,6 +24,7 @@ public class Enemy : MonoBehaviour
     public State currentState = State.Patrol;
     public AudioSource alertSound;
     public GameObject alertSymbol;
+    
     public NavMeshAgent agent;
     public Transform target;
     public Transform waypointParent;
@@ -46,6 +47,10 @@ public class Enemy : MonoBehaviour
     }
     void Start()
     {
+        if(waypointParent == null)
+        {
+            waypointParent = GameObject.FindGameObjectWithTag("WaypointParent").transform;
+        }
         waypoints = waypointParent.GetComponentsInChildren<Transform>();
     }
     IEnumerator SeekDelay()
